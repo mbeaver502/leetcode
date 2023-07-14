@@ -1,3 +1,6 @@
 go 1.20
 
-use ./two-sum
+use (
+	./add-two-numbers
+	./two-sum
+)
