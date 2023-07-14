@@ -6,4 +6,5 @@ use (
 	./palindrome-number
 	./roman-to-integer
 	./two-sum
+	./valid-parentheses
 )
