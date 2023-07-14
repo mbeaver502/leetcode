@@ -4,6 +4,7 @@ use (
 	./add-two-numbers
 	./longest-common-prefix
 	./palindrome-number
+	./remove-duplicates-from-sorted-array
 	./roman-to-integer
 	./two-sum
 	./valid-parentheses
