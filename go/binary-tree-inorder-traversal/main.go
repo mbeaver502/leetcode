@@ -4,23 +4,25 @@ package main
 
 import (
 	"log"
+
+	btu "github.com/mbeaver502/leetcode/go/binarytreeutils"
 )
 
 // The number of nodes in the tree is in the range [0, 100].
 // -100 <= Node.val <= 100
 type example struct {
-	tree *TreeNode
+	tree *btu.TreeNode
 }
 
 func main() {
 	examples := []example{
 		{
-			&TreeNode{
+			&btu.TreeNode{
 				Val:  1,
 				Left: nil,
-				Right: &TreeNode{
+				Right: &btu.TreeNode{
 					Val: 2,
-					Left: &TreeNode{
+					Left: &btu.TreeNode{
 						Val:   3,
 						Left:  nil,
 						Right: nil,
@@ -33,51 +35,51 @@ func main() {
 			nil,
 		},
 		{
-			&TreeNode{
+			&btu.TreeNode{
 				Val:   1,
 				Left:  nil,
 				Right: nil,
 			},
 		},
 		{
-			&TreeNode{
+			&btu.TreeNode{
 				Val: 30,
-				Left: &TreeNode{
+				Left: &btu.TreeNode{
 					Val: 20,
-					Left: &TreeNode{
+					Left: &btu.TreeNode{
 						Val: 15,
-						Left: &TreeNode{
+						Left: &btu.TreeNode{
 							Val:   5,
 							Left:  nil,
 							Right: nil,
 						},
-						Right: &TreeNode{
+						Right: &btu.TreeNode{
 							Val:   18,
 							Left:  nil,
 							Right: nil,
 						},
 					},
-					Right: &TreeNode{
+					Right: &btu.TreeNode{
 						Val:   25,
 						Left:  nil,
 						Right: nil,
 					},
 				},
-				Right: &TreeNode{
+				Right: &btu.TreeNode{
 					Val: 40,
-					Left: &TreeNode{
+					Left: &btu.TreeNode{
 						Val:   35,
 						Left:  nil,
 						Right: nil,
 					},
-					Right: &TreeNode{
+					Right: &btu.TreeNode{
 						Val: 50,
-						Left: &TreeNode{
+						Left: &btu.TreeNode{
 							Val:   45,
 							Left:  nil,
 							Right: nil,
 						},
-						Right: &TreeNode{
+						Right: &btu.TreeNode{
 							Val:   60,
 							Left:  nil,
 							Right: nil,
@@ -90,27 +92,6 @@ func main() {
 
 	for _, ex := range examples {
 		log.Printf("input:  %+v", ex.tree)
-		traversal := inorderTraversal(ex.tree)
-		log.Printf("%+v\n", traversal)
+		log.Printf("output: %+v\n", ex.tree.InOrderTraversal())
 	}
-}
-
-// TreeNode defines a binary tree.
-// Provided by LeetCode.
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
-
-func inorderTraversal(root *TreeNode) []int {
-	if root == nil {
-		return []int{}
-	}
-
-	parent := []int{root.Val}
-	left := inorderTraversal(root.Left)
-	right := inorderTraversal(root.Right)
-
-	return append(left, append(parent, right...)...)
 }
