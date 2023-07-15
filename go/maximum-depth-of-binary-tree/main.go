@@ -4,23 +4,27 @@
 // the longest path from the root node down to the farthest leaf node.
 package main
 
-import "log"
+import (
+	"log"
+
+	btu "github.com/mbeaver502/leetcode/go/binarytreeutils"
+)
 
 // The number of nodes in the tree is in the range [0, 10^4].
 // -100 <= Node.val <= 100
 type example struct {
-	tree *TreeNode
+	tree *btu.TreeNode
 }
 
 func main() {
 	examples := []example{
 		{
-			&TreeNode{
+			&btu.TreeNode{
 				Val:  1,
 				Left: nil,
-				Right: &TreeNode{
+				Right: &btu.TreeNode{
 					Val: 2,
-					Left: &TreeNode{
+					Left: &btu.TreeNode{
 						Val:   3,
 						Left:  nil,
 						Right: nil,
@@ -33,51 +37,51 @@ func main() {
 			nil,
 		},
 		{
-			&TreeNode{
+			&btu.TreeNode{
 				Val:   1,
 				Left:  nil,
 				Right: nil,
 			},
 		},
 		{
-			&TreeNode{
+			&btu.TreeNode{
 				Val: 30,
-				Left: &TreeNode{
+				Left: &btu.TreeNode{
 					Val: 20,
-					Left: &TreeNode{
+					Left: &btu.TreeNode{
 						Val: 15,
-						Left: &TreeNode{
+						Left: &btu.TreeNode{
 							Val:   5,
 							Left:  nil,
 							Right: nil,
 						},
-						Right: &TreeNode{
+						Right: &btu.TreeNode{
 							Val:   18,
 							Left:  nil,
 							Right: nil,
 						},
 					},
-					Right: &TreeNode{
+					Right: &btu.TreeNode{
 						Val:   25,
 						Left:  nil,
 						Right: nil,
 					},
 				},
-				Right: &TreeNode{
+				Right: &btu.TreeNode{
 					Val: 40,
-					Left: &TreeNode{
+					Left: &btu.TreeNode{
 						Val:   35,
 						Left:  nil,
 						Right: nil,
 					},
-					Right: &TreeNode{
+					Right: &btu.TreeNode{
 						Val: 50,
-						Left: &TreeNode{
+						Left: &btu.TreeNode{
 							Val:   45,
 							Left:  nil,
 							Right: nil,
 						},
-						Right: &TreeNode{
+						Right: &btu.TreeNode{
 							Val:   60,
 							Left:  nil,
 							Right: nil,
@@ -89,29 +93,7 @@ func main() {
 	}
 
 	for _, ex := range examples {
-		log.Printf("input:  %+v", ex.tree)
-		log.Printf("%+v\n", maxDepth(ex.tree))
+		log.Printf("input:  %+v", ex.tree.InOrderTraversal())
+		log.Printf("%+v\n", ex.tree.MaxDepth())
 	}
-}
-
-// TreeNode defines a binary tree.
-// Provided by LeetCode.
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
-
-func maxDepth(root *TreeNode) int {
-	if root == nil {
-		return 0
-	}
-
-	depthLeft := 1 + maxDepth(root.Left)
-	depthRight := 1 + maxDepth(root.Right)
-
-	if depthLeft > depthRight {
-		return depthLeft
-	}
-	return depthRight
 }
