@@ -17,6 +17,7 @@ use (
 	./roman-to-integer
 	./single-number
 	./sqrtx
+	./symmetric-tree
 	./two-sum
 	./valid-palindrome
 	./valid-parentheses
