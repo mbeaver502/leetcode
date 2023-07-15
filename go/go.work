@@ -8,6 +8,7 @@ use (
 	./binary-tree-postorder-traversal
 	./binary-tree-preorder-traversal
 	./binarytreeutils
+	./contains-duplicate
 	./convert-sorted-array-to-binary-search-tree
 	./find-the-index-of-the-first-occurrence-in-a-string
 	./intersection-of-two-linked-lists
