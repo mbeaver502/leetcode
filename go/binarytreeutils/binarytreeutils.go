@@ -116,3 +116,22 @@ func isMirror(left, right *TreeNode) bool {
 
 	return false
 }
+
+// HasPathSum determines whether the binary tree t
+// has a root-to-leaf path that sums to targetSum.
+func (t *TreeNode) HasPathSum(targetSum int) bool {
+	return hasPathSum(t, targetSum)
+}
+
+func hasPathSum(root *TreeNode, targetSum int) bool {
+	if root == nil {
+		return false
+	}
+
+	// Make sure we reach a leaf!
+	if root.Left == nil && root.Right == nil {
+		return root.Val == targetSum
+	}
+
+	return hasPathSum(root.Left, targetSum-root.Val) || hasPathSum(root.Right, targetSum-root.Val)
+}
