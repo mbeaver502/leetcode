@@ -1,6 +1,7 @@
 go 1.20
 
 use (
+	./add-binary
 	./add-two-numbers
 	./find-the-index-of-the-first-occurrence-in-a-string
 	./length-of-last-word
