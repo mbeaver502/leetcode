@@ -14,6 +14,7 @@ use (
 	./longest-common-prefix
 	./maximum-depth-of-binary-tree
 	./merge-sorted-array
+	./number-of-1-bits
 	./palindrome-number
 	./path-sum
 	./plus-one
