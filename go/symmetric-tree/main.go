@@ -3,10 +3,14 @@
 // it is a mirror of itself (i.e., symmetric around its center).
 package main
 
-import "log"
+import (
+	"log"
+
+	btu "github.com/mbeaver502/leetcode/go/binarytreeutils"
+)
 
 type example struct {
-	tree *TreeNode
+	tree *btu.TreeNode
 }
 
 func main() {
@@ -15,83 +19,54 @@ func main() {
 			nil,
 		},
 		{
-			&TreeNode{
+			&btu.TreeNode{
 				Val: 1,
-				Left: &TreeNode{
+				Left: &btu.TreeNode{
 					Val:   2,
-					Left:  &TreeNode{Val: 3, Left: nil, Right: nil},
-					Right: &TreeNode{Val: 4, Left: nil, Right: nil},
+					Left:  &btu.TreeNode{Val: 3, Left: nil, Right: nil},
+					Right: &btu.TreeNode{Val: 4, Left: nil, Right: nil},
 				},
-				Right: &TreeNode{
+				Right: &btu.TreeNode{
 					Val:   2,
-					Left:  &TreeNode{Val: 4, Left: nil, Right: nil},
-					Right: &TreeNode{Val: 3, Left: nil, Right: nil},
+					Left:  &btu.TreeNode{Val: 4, Left: nil, Right: nil},
+					Right: &btu.TreeNode{Val: 3, Left: nil, Right: nil},
 				},
 			},
 		},
 		{
-			&TreeNode{
+			&btu.TreeNode{
 				Val: 1,
-				Left: &TreeNode{
+				Left: &btu.TreeNode{
 					Val:   2,
-					Left:  &TreeNode{Val: 3, Left: nil, Right: nil},
+					Left:  &btu.TreeNode{Val: 3, Left: nil, Right: nil},
 					Right: nil,
 				},
-				Right: &TreeNode{
+				Right: &btu.TreeNode{
 					Val:   2,
-					Left:  &TreeNode{Val: 4, Left: nil, Right: nil},
+					Left:  &btu.TreeNode{Val: 4, Left: nil, Right: nil},
 					Right: nil,
 				},
 			},
 		},
 		{
-			&TreeNode{
+			&btu.TreeNode{
 				Val: 1,
-				Left: &TreeNode{
+				Left: &btu.TreeNode{
 					Val:   2,
-					Left:  &TreeNode{Val: 3, Left: nil, Right: nil},
-					Right: &TreeNode{Val: 4, Left: nil, Right: nil},
+					Left:  &btu.TreeNode{Val: 3, Left: nil, Right: nil},
+					Right: &btu.TreeNode{Val: 4, Left: nil, Right: nil},
 				},
-				Right: &TreeNode{
+				Right: &btu.TreeNode{
 					Val:   2,
-					Left:  &TreeNode{Val: 4, Left: nil, Right: nil},
-					Right: &TreeNode{Val: 4, Left: nil, Right: nil},
+					Left:  &btu.TreeNode{Val: 4, Left: nil, Right: nil},
+					Right: &btu.TreeNode{Val: 4, Left: nil, Right: nil},
 				},
 			},
 		},
 	}
 
 	for _, ex := range examples {
-		log.Printf("input:  %+v", ex.tree)
-		log.Printf("%+v\n", isSymmetric(ex.tree))
+		log.Printf("input:  %+v", ex.tree.InOrderTraversal())
+		log.Printf("%+v\n", ex.tree.IsSymmetric())
 	}
-}
-
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
-
-// We need to check symmetry around the given `root`.
-// So let's check each side of the tree by splitting
-// the tree and traversing the left and right sides.
-func isSymmetric(root *TreeNode) bool {
-	return isMirror(root, root)
-}
-
-func isMirror(left, right *TreeNode) bool {
-	if left == nil && right == nil {
-		return true
-	}
-
-	// We want the outer branches to match each other
-	// and for the inner branches to match each other.
-	if left != nil && right != nil {
-		if left.Val == right.Val {
-			return isMirror(left.Left, right.Right) && isMirror(left.Right, right.Left)
-		}
-	}
-
-	return false
 }
