@@ -33,20 +33,20 @@ func Constructor() MyStack {
 	}
 }
 
-func (this *MyStack) Push(x int) {
-	this.stack = append(this.stack, x)
+func (s *MyStack) Push(x int) {
+	s.stack = append(s.stack, x)
 }
 
-func (this *MyStack) Pop() int {
-	val := this.Top()
-	this.stack = this.stack[:len(this.stack)-1]
+func (s *MyStack) Pop() int {
+	val := s.Top()
+	s.stack = s.stack[:len(s.stack)-1]
 	return val
 }
 
-func (this *MyStack) Top() int {
-	return this.stack[len(this.stack)-1]
+func (s *MyStack) Top() int {
+	return s.stack[len(s.stack)-1]
 }
 
-func (this *MyStack) Empty() bool {
-	return len(this.stack) == 0
+func (s *MyStack) Empty() bool {
+	return len(s.stack) == 0
 }
