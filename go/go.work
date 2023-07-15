@@ -4,6 +4,7 @@ use (
 	./add-binary
 	./add-two-numbers
 	./binary-tree-inorder-traversal
+	./binarytreeutils
 	./convert-sorted-array-to-binary-search-tree
 	./find-the-index-of-the-first-occurrence-in-a-string
 	./length-of-last-word
@@ -11,6 +12,7 @@ use (
 	./maximum-depth-of-binary-tree
 	./merge-sorted-array
 	./palindrome-number
+	./path-sum
 	./plus-one
 	./remove-duplicates-from-sorted-array
 	./remove-duplicates-from-sorted-list
