@@ -21,6 +21,7 @@ use (
 	./remove-duplicates-from-sorted-array
 	./remove-duplicates-from-sorted-list
 	./remove-element
+	./reverse-bits
 	./roman-to-integer
 	./same-tree
 	./single-number
