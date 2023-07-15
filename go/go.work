@@ -2,6 +2,7 @@ go 1.20
 
 use (
 	./add-two-numbers
+	./find-the-index-of-the-first-occurrence-in-a-string
 	./longest-common-prefix
 	./palindrome-number
 	./remove-duplicates-from-sorted-array
