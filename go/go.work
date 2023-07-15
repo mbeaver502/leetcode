@@ -9,6 +9,7 @@ use (
 	./palindrome-number
 	./plus-one
 	./remove-duplicates-from-sorted-array
+	./remove-duplicates-from-sorted-list
 	./remove-element
 	./roman-to-integer
 	./sqrtx
