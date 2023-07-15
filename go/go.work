@@ -5,6 +5,7 @@ use (
 	./longest-common-prefix
 	./palindrome-number
 	./remove-duplicates-from-sorted-array
+	./remove-element
 	./roman-to-integer
 	./two-sum
 	./valid-parentheses
