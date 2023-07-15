@@ -11,6 +11,7 @@ use (
 	./contains-duplicate
 	./convert-sorted-array-to-binary-search-tree
 	./find-the-index-of-the-first-occurrence-in-a-string
+	./implement-stack-using-queues
 	./intersection-of-two-linked-lists
 	./length-of-last-word
 	./linked-list-cycle
