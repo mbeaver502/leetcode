@@ -11,6 +11,7 @@ use (
 	./convert-sorted-array-to-binary-search-tree
 	./find-the-index-of-the-first-occurrence-in-a-string
 	./length-of-last-word
+	./linked-list-cycle
 	./longest-common-prefix
 	./maximum-depth-of-binary-tree
 	./merge-sorted-array
