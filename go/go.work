@@ -4,6 +4,7 @@ use (
 	./add-binary
 	./add-two-numbers
 	./binary-tree-inorder-traversal
+	./binary-tree-postorder-traversal
 	./binary-tree-preorder-traversal
 	./binarytreeutils
 	./convert-sorted-array-to-binary-search-tree
