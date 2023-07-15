@@ -47,9 +47,6 @@ func removeElements(head *ListNode, val int) *ListNode {
 			prev = node
 		}
 	}
-	if nHead.Next == nil {
-		return nil
-	}
 	return nHead.Next
 }
 
