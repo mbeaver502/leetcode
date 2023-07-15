@@ -10,6 +10,7 @@ use (
 	./remove-duplicates-from-sorted-array
 	./remove-element
 	./roman-to-integer
+	./sqrtx
 	./two-sum
 	./valid-parentheses
 )
