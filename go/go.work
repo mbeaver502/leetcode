@@ -24,6 +24,7 @@ use (
 	./remove-duplicates-from-sorted-list
 	./remove-element
 	./reverse-bits
+	./reverse-linked-list
 	./roman-to-integer
 	./same-tree
 	./single-number
