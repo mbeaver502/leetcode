@@ -6,6 +6,7 @@ use (
 	./find-the-index-of-the-first-occurrence-in-a-string
 	./length-of-last-word
 	./longest-common-prefix
+	./merge-sorted-array
 	./palindrome-number
 	./plus-one
 	./remove-duplicates-from-sorted-array
