@@ -13,6 +13,7 @@ use (
 	./remove-duplicates-from-sorted-list
 	./remove-element
 	./roman-to-integer
+	./single-number
 	./sqrtx
 	./two-sum
 	./valid-parentheses
