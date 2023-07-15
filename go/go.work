@@ -3,6 +3,7 @@ go 1.20
 use (
 	./add-binary
 	./add-two-numbers
+	./binary-tree-inorder-traversal
 	./find-the-index-of-the-first-occurrence-in-a-string
 	./length-of-last-word
 	./longest-common-prefix
