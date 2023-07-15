@@ -26,6 +26,24 @@ func inorderTraversal(root *TreeNode) []int {
 	return append(left, append(parent, right...)...)
 }
 
+// PreOrderTraversal returns a slice of ints produced
+// via a pre-order traversal of the tree t.
+func (t *TreeNode) PreOrderTraversal() []int {
+	return preorderTraversal(t)
+}
+
+func preorderTraversal(root *TreeNode) []int {
+	if root == nil {
+		return []int{}
+	}
+
+	parent := []int{root.Val}
+	left := preorderTraversal(root.Left)
+	right := preorderTraversal(root.Right)
+
+	return append(parent, append(left, right...)...)
+}
+
 // MaxDepth returns the max depth of the tree t.
 func (t *TreeNode) MaxDepth() int {
 	return maxDepth(t)
