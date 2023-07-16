@@ -28,6 +28,7 @@ use (
 	./remove-linked-list-elements
 	./reverse-bits
 	./reverse-linked-list
+	./reverse-string
 	./roman-to-integer
 	./same-tree
 	./single-number
