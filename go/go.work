@@ -34,6 +34,7 @@ use (
 	./same-tree
 	./single-number
 	./sqrtx
+	./sum-of-left-leaves
 	./symmetric-tree
 	./two-sum
 	./valid-palindrome
