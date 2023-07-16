@@ -3,6 +3,7 @@ go 1.20
 use (
 	./add-binary
 	./add-two-numbers
+	./base-7
 	./best-time-to-buy-and-sell-stock
 	./binary-tree-inorder-traversal
 	./binary-tree-postorder-traversal
