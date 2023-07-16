@@ -15,6 +15,7 @@ use (
 	./excel-sheet-column-number
 	./find-the-index-of-the-first-occurrence-in-a-string
 	./fizz-buzz
+	./hamming-distance
 	./implement-stack-using-queues
 	./intersection-of-two-linked-lists
 	./length-of-last-word
