@@ -18,6 +18,7 @@ use (
 	./hamming-distance
 	./implement-stack-using-queues
 	./intersection-of-two-linked-lists
+	./isomorphic-strings
 	./length-of-last-word
 	./linked-list-cycle
 	./longest-common-prefix
