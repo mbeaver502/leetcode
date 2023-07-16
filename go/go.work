@@ -25,6 +25,7 @@ use (
 	./palindrome-number
 	./path-sum
 	./plus-one
+	./ransom-note
 	./remove-duplicates-from-sorted-array
 	./remove-duplicates-from-sorted-list
 	./remove-element
