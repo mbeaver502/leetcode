@@ -12,6 +12,7 @@ use (
 	./convert-sorted-array-to-binary-search-tree
 	./counting-bits
 	./find-the-index-of-the-first-occurrence-in-a-string
+	./fizz-buzz
 	./implement-stack-using-queues
 	./intersection-of-two-linked-lists
 	./length-of-last-word
