@@ -11,6 +11,7 @@ use (
 	./contains-duplicate
 	./convert-sorted-array-to-binary-search-tree
 	./counting-bits
+	./excel-sheet-column-number
 	./find-the-index-of-the-first-occurrence-in-a-string
 	./fizz-buzz
 	./implement-stack-using-queues
