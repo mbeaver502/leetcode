@@ -39,6 +39,7 @@ use (
 	./sqrtx
 	./sum-of-left-leaves
 	./symmetric-tree
+	./to-lower-case
 	./two-sum
 	./valid-palindrome
 	./valid-parentheses
