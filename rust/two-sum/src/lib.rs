@@ -8,11 +8,11 @@ impl Solution {
         use std::collections::HashMap;
 
         let mut map: HashMap<i32, i32> = HashMap::new();
-        for (i, n) in nums.iter().enumerate() {
-            if let Some(v) = map.get(&(target - n)) {
-                return vec![*v, i as i32];
+        for (i, &n) in nums.iter().enumerate() {
+            if let Some(&v) = map.get(&(target - n)) {
+                return vec![v, i as i32];
             }
-            map.insert(*n, i as i32);
+            map.insert(n, i as i32);
         }
 
         vec![-1, -1]
