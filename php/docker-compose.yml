@@ -9,11 +9,11 @@ services:
             - "80:80"        
         volumes:
             - ./:/var/www/html/
-        depends_on:
+        # depends_on:
             # - mysql
             # - postgres
             # - redis
-            - composer
+            # - composer
 
     # For now, you'll have to enter the Docker image terminal and 
     # run composer commands (or use dockerfile?).
@@ -25,8 +25,8 @@ services:
         entrypoint: /usr/bin/composer
         volumes:
             - ./www/:/var/www/html/
-        profiles:
-            - composer
+        # profiles:
+        #     - composer
 
     # mysql:
     #     image: mysql:latest
