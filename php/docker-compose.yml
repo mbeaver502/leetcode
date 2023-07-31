@@ -1,0 +1,61 @@
+version: '3.8'
+services:
+    php:
+        container_name: php-apache
+        build:
+            context: .
+            dockerfile: php.dockerfile        
+        ports:
+            - "80:80"        
+        volumes:
+            - ./:/var/www/html/
+        depends_on:
+            # - mysql
+            # - postgres
+            # - redis
+            - composer
+
+    # For now, you'll have to enter the Docker image terminal and 
+    # run composer commands (or use dockerfile?).
+    composer:
+        build:
+            context: .
+            dockerfile: php.dockerfile
+        working_dir: /var/www/html/
+        entrypoint: /usr/bin/composer
+        volumes:
+            - ./www/:/var/www/html/
+        profiles:
+            - composer
+
+    # mysql:
+    #     image: mysql:latest
+    #     restart: always
+    #     environment:
+    #         MYSQL_ROOT_PASSWORD: 'password'
+    #         MYSQL_USER: 'dbuser'
+    #         MYSQL_PASSWORD: 'password'
+    #     ports:
+    #         - "3306:3306"
+
+    # postgres:
+    #     image: postgres:latest
+    #     restart: always
+    #     environment:
+    #         POSTGRES_PASSWORD: 'password'
+    #         POSTGRES_USER: 'dbuser'
+    #     ports:
+    #         - "5432:5432"
+
+    # redis:
+    #     image: redis:latest
+    #     restart: always
+    #     ports:
+    #         - "6379:6379"
+
+    # mailhog:
+    #     image: mailhog/mailhog:latest
+    #     restart: always
+    #     ports:
+    #         - "1025:1025"
+    #         - "8025:8025"
